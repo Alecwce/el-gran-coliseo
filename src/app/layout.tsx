@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./tailwind.css";
 
 const inter = Inter({
@@ -24,10 +25,14 @@ export const metadata: Metadata = {
     description: 'La batalla por $20,000 USD en vivo por Kick',
     url: 'https://coliseo-benjaz.vercel.app',
     siteName: 'El Gran Coliseo',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
-    locale: 'es_PE', type: 'website',
+    images: [{ url: 'https://el-gran-coliseo.vercel.app/og-image.png', width: 1200, height: 630 }],
+    locale: 'es_PE',
+    type: 'website',
   },
   twitter: { card: 'summary_large_image', creator: '@benjaz' },
+  other: {
+    'fb:app_id': ''
+  },
   metadataBase: new URL('https://coliseo-benjaz.vercel.app'),
 };
 
@@ -44,6 +49,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );

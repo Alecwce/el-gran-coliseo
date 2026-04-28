@@ -33,7 +33,7 @@ export default function Home() {
           <a
             href="https://kick.com/benjaz"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="mt-8 flex items-center justify-center rounded-none bg-[#53FC18] px-8 py-4 font-sans text-lg font-bold uppercase tracking-wider text-[#0A0A0A] transition-transform hover:scale-105"
           >
             VER EN VIVO
