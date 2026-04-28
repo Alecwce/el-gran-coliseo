@@ -1,0 +1,14 @@
+export const teams = [
+  { id: "chala-team", name: "Chala Team", group: "A", logo: "chala.png" },
+  { id: "gotto-house", name: "Gotto House", group: "A", logo: "gotto.png" },
+  { id: "los-bemboyz", name: "Los Bemboyz", group: "A", logo: "bemboyz.png" },
+  { id: "rage-overdose", name: "Rage Overdose", group: "A", logo: "rage.png" },
+  { id: "the-bots", name: "The Bot$", group: "A", logo: "bots.png" },
+  { id: "the-monsters", name: "The Monsters", group: "A", logo: "monsters.png" },
+  { id: "capibarbas", name: "Capibarbas", group: "B", logo: "capibarbas.png" },
+  { id: "mango-boys", name: "Mango Boys", group: "B", logo: "mango.png" },
+  { id: "tailung-mafia", name: "TaiLung Mafia", group: "B", logo: "tailung.png" },
+  { id: "team-peyitaz", name: "Team Peyitaz", group: "B", logo: "peyitaz.png" },
+  { id: "the-blacklist", name: "The Blacklist", group: "B", logo: "blacklist.png" },
+  { id: "wk-bear-bones", name: "WK Bear and Bones", group: "B", logo: "wk.png" }
+];

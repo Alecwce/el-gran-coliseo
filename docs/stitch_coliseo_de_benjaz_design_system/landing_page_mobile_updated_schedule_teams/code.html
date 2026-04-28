@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>El Gran Coliseo de Benjaz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Newsreader:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary-fixed": "#001849",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#735c00",
+                        "tertiary-container": "#96b1ff",
+                        "on-tertiary": "#002b75",
+                        "secondary-fixed": "#7bff51",
+                        "outline-variant": "#4d4635",
+                        "secondary": "#ccffb4",
+                        "outline": "#99907c",
+                        "primary": "#f2ca50",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353534",
+                        "primary-container": "#d4af37",
+                        "on-primary-container": "#554300",
+                        "inverse-on-surface": "#313030",
+                        "background": "#131313",
+                        "secondary-container": "#4af403",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#b3c5ff",
+                        "on-secondary-fixed-variant": "#135200",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe088",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed-variant": "#003fa4",
+                        "on-surface-variant": "#d0c5af",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#1b6a00",
+                        "on-background": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#0b3900",
+                        "tertiary": "#bfcdff",
+                        "tertiary-fixed": "#dae1ff",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#003ea1",
+                        "secondary-fixed-dim": "#44e400",
+                        "on-secondary-fixed": "#042100",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "24px",
+                        "gutter": "16px",
+                        "section-gap": "64px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Newsreader"],
+                        "headline-lg": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-surface-container-lowest">
+<!-- TopAppBar from JSON -->
+<header class="bg-[#0A0A0A]/90 backdrop-blur-md font-['Newsreader'] uppercase tracking-widest docked full-width top-0 sticky z-50 border-b border-[#D4AF37]/30 shadow-2xl shadow-black flex flex-col w-full">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1280px] mx-auto md:hidden">
+<span class="text-2xl font-black text-[#D4AF37] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">EL GRAN COLISEO</span>
+<button class="text-[#D4AF37] p-2 hover:text-[#53FC18] transition-colors scale-95 active:scale-90 duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="hidden md:flex justify-between items-center w-full px-8 py-4 max-w-[1280px] mx-auto">
+<span class="text-2xl font-black text-[#D4AF37] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">EL GRAN COLISEO</span>
+<nav class="flex gap-6 items-center">
+<a class="text-[#D4AF37] hover:text-[#53FC18] transition-colors hover:text-[#53FC18] transition-all duration-300 scale-95 active:scale-90 duration-150" href="#">Formato</a>
+<a class="text-[#D4AF37] hover:text-[#53FC18] transition-colors hover:text-[#53FC18] transition-all duration-300 scale-95 active:scale-90 duration-150" href="#">Equipos</a>
+<a class="text-[#D4AF37] hover:text-[#53FC18] transition-colors hover:text-[#53FC18] transition-all duration-300 scale-95 active:scale-90 duration-150" href="#">Horario</a>
+<a class="text-[#D4AF37] hover:text-[#53FC18] transition-colors hover:text-[#53FC18] transition-all duration-300 scale-95 active:scale-90 duration-150" href="#">Replays</a>
+</nav>
+<div class="flex gap-4">
+<button class="text-[#D4AF37] border-2 border-[#D4AF37] px-4 py-2 hover:text-[#53FC18] transition-colors hover:text-[#53FC18] transition-all duration-300 scale-95 active:scale-90 duration-150">LOGIN</button>
+<button class="bg-[#53FC18] text-[#0A0A0A] font-bold px-4 py-2 hover:opacity-90 transition-opacity scale-95 active:scale-90 duration-150">UNIRSE</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[375px] mx-auto md:max-w-none md:w-full">
+<!-- Hero Section -->
+<section class="relative w-full h-[707px] flex flex-col justify-center items-center text-center px-4 overflow-hidden border-b border-primary-container">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-[#0A0A0A]">
+<img alt="Coliseum Background" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="dramatic wide angle view of an ancient roman coliseum arena interior at night with subtle epic stadium lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCts2iT2nATadBgazAFTWJfJg0D0icnGIndAjH92_1y0BbAO6nDrixCEsFmeq3rPgu1DGLALh21N4QMa41mHTcFPANRK-PGWCj_YtlW28frwoq4g5KjCbmimgl-RozIUCfrpcB4bm90TQ0mKEpyxTXgIrgGAJ7xOU69GNOX4kp2BZx1BLUP5Te0PI4E5JLkIuvNDJ6s_Qrt1qfAPcL0smx9JjOzR6pDS8aj7Pnq60nPgnAY4IO0Hh8tOyUdMDB3MTRY_JYlndxzZ0R0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+<!-- Radial gradient for center focus -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0A0A0A_100%)] opacity-80"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center gap-6 mt-16">
+<!-- EN VIVO Badge -->
+<div class="inline-flex items-center gap-2 bg-[#53FC18] px-3 py-1 border border-black shadow-[0_0_15px_rgba(83,252,24,0.3)]">
+<div class="w-2 h-2 rounded-full bg-black animate-pulse"></div>
+<span class="font-label-caps text-[10px] text-black tracking-widest font-bold">EN VIVO</span>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-xl text-headline-xl text-primary-container drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)] uppercase">
+                        EL GRAN COLISEO<br/>DE BENJAZ
+                    </h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.2em] mt-2">
+                        27 ABR – 3 MAY 2026
+                    </p>
+</div>
+<!-- CTA -->
+<button class="mt-8 bg-[#53FC18] text-surface-container-lowest font-body-md font-bold px-8 py-4 uppercase tracking-widest hover:bg-secondary-container transition-colors shadow-[0_0_20px_rgba(83,252,24,0.2)] hover:shadow-[0_0_30px_rgba(83,252,24,0.4)] active:scale-95 duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    VER EN VIVO
+                </button>
+</div>
+</section>
+<!-- Formato Section -->
+<section class="py-16 px-4 bg-background w-full flex flex-col items-center gap-8 border-b border-primary-container/20">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase text-center w-full pb-4 border-b border-primary-container/30">Formato</h2>
+<div class="w-full max-w-sm flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-primary-container p-6 relative group hover:shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-shadow duration-300">
+<div class="absolute -top-3 -left-3 bg-background border border-primary-container p-1 z-10 text-primary-container">
+<span class="material-symbols-outlined text-[20px]">swords</span>
+</div>
+<h3 class="font-headline-lg text-[24px] text-on-surface uppercase mb-2">Grupos Bo1</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Fase inicial de grupos. Todos contra todos al mejor de 1.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-primary-container p-6 relative group hover:shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-shadow duration-300">
+<div class="absolute -top-3 -left-3 bg-background border border-primary-container p-1 z-10 text-primary-container">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</div>
+<h3 class="font-headline-lg text-[24px] text-on-surface uppercase mb-2">Playoffs Bo3</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Eliminación directa al mejor de 3. Solo los fuertes sobreviven.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-primary-container p-6 relative group hover:shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-shadow duration-300">
+<div class="absolute -top-3 -left-3 bg-background border border-primary-container p-1 z-10 text-primary-container">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+</div>
+<h3 class="font-headline-lg text-[24px] text-primary-container uppercase mb-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Final Bo5</h3>
+<p class="font-body-md text-on-surface-variant text-sm">La gran batalla final. Al mejor de 5 partidas por la gloria.</p>
+</div>
+</div>
+</section>
+<!-- Equipos Section -->
+<section class="py-16 px-4 bg-surface-container-lowest w-full flex flex-col items-center gap-8 border-b border-primary-container/20">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase text-center w-full pb-4 border-b border-primary-container/30">Equipos</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-4xl">
+<!-- Group A Teams -->
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="The Monsters" class="w-full h-full object-cover scale-150 origin-[15%_41%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">THE MONSTERS</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Los Bemboyz" class="w-full h-full object-cover scale-150 origin-[15%_51%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">LOS BEMBOYZ</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Rage Overdose" class="w-full h-full object-cover scale-150 origin-[15%_62%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">RAGE OVERDOSE</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="The Bot$" class="w-full h-full object-cover scale-150 origin-[15%_72%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">THE BOT$</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Chala Team" class="w-full h-full object-cover scale-150 origin-[15%_82%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">CHALA TEAM</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Gotto House" class="w-full h-full object-cover scale-150 origin-[15%_92%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhtmecL7kWn5elKz3v7kw90RLkPbLAMcBz4IOBYKZudrPALXQNOczM6ifkxgYo9gXNC5Aws6i61KCk1qK-1MxwONeEoQEMsTY-YLCmLtY6rMcsZpzZeMvyDIy1XBjm0FA0h_x965zzhCcsqQZCaAbflJf3Uqo7-6Lu_Z5H23C2sGgC4nVD3Mtta67y0xBCm5EayrFvDe8D9KDJ4Nnr3Eye6HYFMpxMlA4R2T6Hr1cZ5F1kIA9-RupKMYG0tV8UDonzseNk-3Nmd_5U"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">GOTTO HOUSE</span>
+</div>
+</div>
+<!-- Group B Teams -->
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Mango Boys" class="w-full h-full object-cover scale-150 origin-[15%_41%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">MANGO BOYS</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="The Blacklist" class="w-full h-full object-cover scale-150 origin-[15%_51%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">THE BLACKLIST</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="TaiLung Mafia" class="w-full h-full object-cover scale-150 origin-[15%_62%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">TAILUNG MAFIA</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="WK Bear and Bones" class="w-full h-full object-cover scale-150 origin-[15%_72%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">WK BEAR AND BONES</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Capibarbas" class="w-full h-full object-cover scale-150 origin-[15%_82%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">CAPIBARBAS</span>
+</div>
+</div>
+<div class="flex flex-col items-center bg-surface-container-low border border-primary-container hover:border-[3px] transition-all duration-200 group">
+<div class="w-full aspect-square bg-surface-container p-4 flex items-center justify-center border-b border-primary-container/30 overflow-hidden relative">
+<img alt="Team Peyitaz" class="w-full h-full object-cover scale-150 origin-[15%_92%] filter grayscale group-hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/ADBb0uhwNyFlrxOj2wf_GiKSvA9HF5sz0cMkQppbykjSDV8YsofZ8sO_MbX47lz54box6PpggNj9rgjXcsDVP0kKGoTa5YER35-Ma0v9_h9IFxgTLMHLXJm5aqH-e3PQQDhu5wVG8BCSTH9APnloJywey9-OG_a-Snxl0YxjhyEPgeNDoxZWUwPu-OiuYDwsnVyEUVYGhT4kRT40AZLNmO-FcuFweppMryU0520ENLwWzcKr2cKlCKqqb76Y7pHva1cCWTHxqX5d9crn1WA"/>
+</div>
+<div class="p-3 w-full text-center bg-background">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider block truncate">TEAM PEYITAZ</span>
+</div>
+</div>
+</div>
+<button class="mt-4 border-2 border-primary-container text-primary-container font-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary-container/10 transition-colors active:scale-95 duration-150">
+                VER TODOS
+            </button>
+</section>
+<!-- Horario Hoy Section -->
+<section class="py-16 px-4 bg-background w-full flex flex-col items-center gap-8">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase text-center w-full pb-4 border-b border-primary-container/30">Horario Hoy</h2>
+<div class="w-full max-w-sm border border-primary-container bg-surface-container-lowest">
+<!-- Table Header -->
+<div class="grid grid-cols-3 border-b border-primary-container bg-[#0066FF]/10">
+<div class="p-3 text-center border-r border-primary-container">
+<span class="font-label-caps text-[#0066FF] font-bold uppercase tracking-widest text-[10px]">HORA</span>
+</div>
+<div class="p-3 text-center col-span-2">
+<span class="font-label-caps text-[#0066FF] font-bold uppercase tracking-widest text-[10px]">PARTIDO (BO1)</span>
+</div>
+</div>
+<!-- Table Rows -->
+<div class="flex flex-col">
+<!-- Row 1 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">14:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">THE BOT$</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">LOS BEMBOYZ</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">15:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate" title="WK BEAR AND BONES">WK BEAR...</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">TEAM PEYITAZ</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">16:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">RAGE OVERDOSE</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">THE MONSTERS</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">17:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">MANGO BOYS</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">CAPIBARBAS</span>
+</div>
+</div>
+<!-- Row 5 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">18:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">THE BOT$</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">GOTTO HOUSE</span>
+</div>
+</div>
+<!-- Row 6 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">19:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate" title="WK BEAR AND BONES">WK BEAR...</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">THE BLACKLIST</span>
+</div>
+</div>
+<!-- Row 7 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">20:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">LOS BEMBOYZ</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">RAGE OVERDOSE</span>
+</div>
+</div>
+<!-- Row 8 -->
+<div class="grid grid-cols-3 border-b border-primary-container/30 bg-surface-container-low/50 hover:bg-surface-container transition-colors">
+<div class="p-4 flex items-center justify-center border-r border-primary-container">
+<span class="font-body-md text-on-surface font-bold">21:00</span>
+</div>
+<div class="p-4 flex items-center justify-between col-span-2 gap-2">
+<span class="font-label-caps text-on-surface truncate">TEAM PEYITAZ</span>
+<span class="font-label-caps text-primary-container text-[10px]">VS</span>
+<span class="font-label-caps text-on-surface truncate">THE BLACKLIST</span>
+</div>
+</div>
+</div>
+</div>
+<button class="text-on-surface-variant font-label-caps text-xs underline hover:text-primary-container transition-colors py-2">VER CALENDARIO COMPLETO</button>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-[#0A0A0A] text-[#D4AF37] font-['Inter'] text-xs tracking-tight full-width py-12 border-t border-[#D4AF37]/20 flex flex-col items-center gap-6 max-w-[1280px] mx-auto px-4 w-full mt-auto">
+<span class="text-lg font-bold text-[#D4AF37]">EL GRAN COLISEO</span>
+<nav class="flex flex-wrap justify-center gap-4">
+<a class="text-gray-500 hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-all" href="#">Términos</a>
+<a class="text-gray-500 hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-all" href="#">Privacidad</a>
+<a class="text-gray-500 hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-all" href="#">Contacto</a>
+<a class="text-gray-500 hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-all" href="#">Sponsors</a>
+</nav>
+<div class="mt-4 text-center text-gray-600 border-t border-[#D4AF37]/10 pt-4 w-full max-w-sm">© 2026 EL GRAN COLISEO DE BENJAZ - TODOS LOS DERECHOS RESERVADOS</div>
+</footer>
+</body></html>

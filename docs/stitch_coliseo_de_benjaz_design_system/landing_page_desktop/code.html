@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>El Gran Coliseo de Benjaz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Newsreader:opsz,wght@6..72,700;6..72,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary-fixed-variant": "#574500",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary": "#3c2f00",
+                    "on-tertiary-fixed": "#001849",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e5e2e1",
+                    "inverse-primary": "#735c00",
+                    "tertiary-container": "#96b1ff",
+                    "on-tertiary": "#002b75",
+                    "secondary-fixed": "#7bff51",
+                    "outline-variant": "#4d4635",
+                    "secondary": "#ccffb4",
+                    "outline": "#99907c",
+                    "primary": "#f2ca50",
+                    "surface-bright": "#3a3939",
+                    "surface-variant": "#353534",
+                    "primary-container": "#d4af37",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#313030",
+                    "background": "#131313",
+                    "secondary-container": "#4af403",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "tertiary-fixed-dim": "#b3c5ff",
+                    "on-secondary-fixed-variant": "#135200",
+                    "surface-dim": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed-variant": "#003fa4",
+                    "on-surface-variant": "#d0c5af",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#1b6a00",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary": "#0b3900",
+                    "tertiary": "#bfcdff",
+                    "tertiary-fixed": "#dae1ff",
+                    "surface": "#131313",
+                    "on-tertiary-container": "#003ea1",
+                    "secondary-fixed-dim": "#44e400",
+                    "on-secondary-fixed": "#042100",
+                    "surface-container": "#201f1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "24px",
+                    "gutter": "16px",
+                    "section-gap": "64px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": [
+                            "Newsreader"
+                    ],
+                    "headline-lg": [
+                            "Newsreader"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="bg-[#0A0A0A]/90 backdrop-blur-md sticky z-50 shadow-2xl shadow-black border-b border-[#D4AF37]/30 top-0 w-full">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1280px] mx-auto">
+<div class="text-2xl font-black text-[#D4AF37] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-headline-lg">
+                EL GRAN COLISEO
+            </div>
+<div class="hidden md:flex gap-8 font-label-caps uppercase tracking-widest text-[#D4AF37]">
+<a class="hover:text-[#53FC18] transition-all duration-300" href="#">Formato</a>
+<a class="hover:text-[#53FC18] transition-all duration-300" href="#">Equipos</a>
+<a class="hover:text-[#53FC18] transition-all duration-300 text-[#53FC18] border-b-2 border-[#53FC18] pb-1" href="#">Horario</a>
+<a class="hover:text-[#53FC18] transition-all duration-300" href="#">Replays</a>
+</div>
+<div class="flex gap-4">
+<button class="font-label-caps bg-transparent border-2 border-primary-container text-primary-container px-6 py-2 rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors scale-95 active:scale-90 duration-150">
+                    LOGIN
+                </button>
+<button class="font-label-caps bg-secondary-container text-surface-container-lowest px-6 py-2 rounded-DEFAULT font-bold hover:bg-secondary-fixed hover:shadow-[0_0_15px_rgba(83,252,24,0.4)] transition-all scale-95 active:scale-90 duration-150">
+                    UNIRSE
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[819px] flex items-center justify-center overflow-hidden border-b border-primary-container/20">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="dark coliseum arena texture background" class="w-full h-full object-cover opacity-40" data-alt="dramatic dark stone coliseum interior at night with subtle epic lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Uul7AMDyKPpWInKt2biZZJzKaCJpxEs4WWGysSmwiQlzly5-VVk0EXE_N_AS2Xwmxlq2rPLB8kKWbthuHCZD9kscbIlXdIYSCE9jFf4pBwOQ_bvGt51avhvL1orlFkmmEYb6Dqf-qiX4Btza5VYSxyjTRDjuu8FMmZV1-5F5t32grGgC9pWXRI_SEHDcL4YbCX7_D-vsLNjUG_G9XiEwcPpVo1DK--XkHpjVJHHLSX-Rl9NmstwTW9OTSfzs5FkWSXz2MZgAKJv_"/>
+<div class="absolute inset-0 bg-[#0A0A0A]/60"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center px-4 max-w-[1280px] mx-auto mt-16">
+<!-- Live Badge -->
+<div class="flex items-center gap-2 bg-secondary-container text-surface-container-lowest font-label-caps px-4 py-1.5 rounded-sm mb-8 animate-pulse">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+<span>EN VIVO</span>
+<span class="font-normal opacity-80 border-l border-surface-container-lowest/30 pl-2 ml-1">92.4K en Kick</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary-container drop-shadow-[0_4px_4px_rgba(0,0,0,1)] uppercase mb-4 max-w-4xl tracking-tighter">
+                EL GRAN COLISEO DE BENJAZ
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl font-bold tracking-wide">
+                27 ABR – 3 MAY 2026 | $20,000 USD | Lima
+            </p>
+<a class="bg-secondary-container text-surface-container-lowest font-label-caps text-[16px] px-10 py-4 rounded-sm font-bold flex items-center gap-2 hover:bg-secondary-fixed hover:scale-105 hover:shadow-[0_0_30px_rgba(83,252,24,0.3)] transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                Ver en vivo
+            </a>
+</div>
+</section>
+<!-- Content Sections Container -->
+<main class="max-w-[1280px] mx-auto px-8 py-section-gap flex flex-col gap-section-gap">
+<!-- Formato Section -->
+<section class="flex flex-col gap-8">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase text-center border-b border-primary-container/20 pb-4">Formato</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container border border-primary-container p-8 relative group hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow duration-300">
+<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-4">view_module</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Grupos Bo1</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Round Robin, todos contra todos en la fase inicial.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container border border-primary-container p-8 relative group hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow duration-300">
+<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-4">sports_esports</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Playoffs Bo3</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Eliminación directa, al mejor de 3 mapas.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container border border-primary-container p-8 relative group hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow duration-300">
+<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-4">emoji_events</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Final Bo5</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">La gran batalla por la gloria, al mejor de 5.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Horario Section (Bento Grid Style) -->
+<section class="flex flex-col gap-8">
+<div class="flex justify-between items-end border-b border-primary-container/20 pb-4">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase">Horario Hoy</h2>
+<span class="font-label-caps text-on-surface-variant">ZONA HORARIA: LIMA (GMT-5)</span>
+</div>
+<div class="bg-surface-container border border-primary-container rounded-sm overflow-hidden"><!-- Header Row -->
+<div class="grid grid-cols-4 bg-[#0066FF]/10 border-b border-primary-container">
+<div class="p-4 font-label-caps text-[#0066FF] border-r border-primary-container/30">HORA</div>
+<div class="p-4 font-label-caps text-[#0066FF] border-r border-primary-container/30">EQUIPO 1</div>
+<div class="p-4 font-label-caps text-[#0066FF] border-r border-primary-container/30">VS</div>
+<div class="p-4 font-label-caps text-[#0066FF]">EQUIPO 2</div>
+</div>
+<!-- Match Rows -->
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">14:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        The Bot$
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Los Bemboyz
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">15:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        WK Bear and Bones
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Team Peyitaz
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">16:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Rage Overdose
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        The Monsters
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">17:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Mango Boys
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Capibarbas
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">18:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        The Bot$
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Gotto House
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">19:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        WK Bear and Bones
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        The Blacklist
+                    </div>
+</div>
+<div class="grid grid-cols-4 border-b border-primary-container/20 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">20:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Los Bemboyz
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Rage Overdose
+                    </div>
+</div>
+<div class="grid grid-cols-4 hover:bg-surface-container-high transition-colors">
+<div class="p-4 font-body-md text-on-surface flex items-center border-r border-primary-container/30">21:00</div>
+<div class="p-4 font-body-md text-on-surface font-bold border-r border-primary-container/30 flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        Team Peyitaz
+                    </div>
+<div class="p-4 font-label-caps text-on-surface-variant border-r border-primary-container/30 flex items-center justify-center">BO1</div>
+<div class="p-4 font-body-md text-on-surface font-bold flex items-center gap-2">
+<div class="w-6 h-6 bg-surface-variant border border-primary-container/50"></div>
+                        The Blacklist
+                    </div>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0A0A] w-full py-12 border-t border-[#D4AF37]/20 flex flex-col items-center gap-6 mt-16">
+<div class="flex flex-col items-center gap-6 max-w-[1280px] mx-auto px-4">
+<div class="text-lg font-bold text-[#D4AF37] font-headline-lg uppercase tracking-widest">
+                EL GRAN COLISEO
+            </div>
+<div class="flex gap-6 font-label-caps uppercase tracking-tight text-gray-500">
+<a class="hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-opacity" href="#">Términos</a>
+<a class="hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-opacity" href="#">Privacidad</a>
+<a class="hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-opacity" href="#">Contacto</a>
+<a class="hover:text-[#D4AF37] underline opacity-80 hover:opacity-100 transition-opacity" href="#">Sponsors</a>
+</div>
+<p class="font-body-md text-xs tracking-tight text-on-surface-variant opacity-50">
+                © 2026 EL GRAN COLISEO DE BENJAZ - TODOS LOS DERECHOS RESERVADOS
+            </p>
+</div>
+</footer>
+</body></html>
