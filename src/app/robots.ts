@@ -5,9 +5,11 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: '*', allow: '/' },
       { userAgent: 'facebookexternalhit', allow: '/' },
+      { userAgent: 'Facebot', allow: '/' },
       { userAgent: 'Twitterbot', allow: '/' },
-      { userAgent: 'WhatsApp', allow: '/' }
+      { userAgent: 'WhatsApp', allow: '/' },
     ],
-    sitemap: 'https://el-gran-coliseo.vercel.app/sitemap.xml',
+    sitemap: 'https://el-gran-coliseo.netlify.app/sitemap.xml',
+    host: 'https://el-gran-coliseo.netlify.app',
   };
 }

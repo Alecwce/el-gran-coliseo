@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://coliseo-benjaz.vercel.app';
+  const baseUrl = 'https://el-gran-coliseo.netlify.app';
   
   return [
     {
