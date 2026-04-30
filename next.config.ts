@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.steamusercontent.com' },
+      { protocol: 'https', hostname: 'steamcdn-a.akamaihd.net' },
+      { protocol: 'https', hostname: 'api.opendota.com' },
+      { protocol: 'https', hostname: '**' }
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
