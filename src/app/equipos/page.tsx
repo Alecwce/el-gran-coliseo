@@ -12,7 +12,7 @@ export default function EquiposPage() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {teams.map((team) => (
+        {teams.map((team, idx) => (
           <div
             key={team.id}
             className="group flex flex-col border border-[#D4AF37]/50 bg-[#191B1F] transition-all duration-300 hover:scale-105 hover:border-[#D4AF37] hover:shadow-[0_0_25px_rgba(212,175,55,0.6)]"
@@ -24,7 +24,7 @@ export default function EquiposPage() {
                 alt={`Logo de ${team.name}`}
                 width={300}
                 height={300}
-                priority
+                priority={idx < 4}
                 className="h-full w-full object-contain drop-shadow-md"
               />
             </div>

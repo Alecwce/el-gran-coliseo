@@ -1,4 +1,6 @@
-export const teams = [
+import { Team } from '@/types';
+
+export const teams: Team[] = [
   { id: "chala-team", name: "Chala Team", group: "A", logo: "chala.png" },
   { id: "gotto-house", name: "Gotto House", group: "A", logo: "gotto.png" },
   { id: "los-bemboyz", name: "Los Bemboyz", group: "A", logo: "bemboyz.png" },

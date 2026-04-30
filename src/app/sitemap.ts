@@ -1,35 +1,35 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://el-gran-coliseo.netlify.app';
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://el-gran-coliseo.netlify.app';
   
   return [
     {
-      url: `${baseUrl}`,
+      url: `${base}`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     },
     {
-      url: `${baseUrl}/equipos`,
+      url: `${base}/equipos`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/formato`,
+      url: `${base}/formato`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/horario`,
+      url: `${base}/horario`,
       lastModified: new Date(),
       changeFrequency: 'hourly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/replays`,
+      url: `${base}/replays`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.7,

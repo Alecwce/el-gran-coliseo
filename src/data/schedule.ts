@@ -1,4 +1,6 @@
-export const schedule = [
+import { Match } from '@/types';
+
+export const schedule: Match[] = [
   { "date": "2026-04-27", "time": "14:00", "team1": "The Bot$", "team2": "Los Bemboyz", "stage": "Groups", "bo": 1 },
   { "date": "2026-04-27", "time": "15:00", "team1": "WK Bear and Bones", "team2": "Team Peyitaz", "stage": "Groups", "bo": 1 },
   { "date": "2026-04-27", "time": "16:00", "team1": "Rage Overdose", "team2": "The Monsters", "stage": "Groups", "bo": 1 },

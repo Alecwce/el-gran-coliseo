@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://el-gran-coliseo.netlify.app';
+  
   return {
     rules: [
       { userAgent: '*', allow: '/' },
@@ -9,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Twitterbot', allow: '/' },
       { userAgent: 'WhatsApp', allow: '/' },
     ],
-    sitemap: 'https://el-gran-coliseo.netlify.app/sitemap.xml',
-    host: 'https://el-gran-coliseo.netlify.app',
+    sitemap: `${base}/sitemap.xml`,
+    host: base,
   };
 }
