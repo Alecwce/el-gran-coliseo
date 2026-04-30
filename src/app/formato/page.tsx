@@ -1,3 +1,5 @@
+import { Bracket } from "@/components/Bracket";
+
 export default function FormatoPage() {
   const formatos = [
     {
@@ -29,7 +31,7 @@ export default function FormatoPage() {
         <p className="mt-4 text-gray-400 text-lg">Las reglas y fases que los gladiadores deben superar en la arena.</p>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 mb-20">
         {formatos.map((item, idx) => (
           <div
             key={idx}
@@ -45,6 +47,13 @@ export default function FormatoPage() {
             <p className="text-gray-300 text-lg leading-relaxed">{item.desc}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-16">
+        <h2 className="mb-8 text-center font-serif text-3xl font-bold uppercase tracking-widest text-[#D4AF37]">
+          Cuadro Eliminatorio (Playoffs)
+        </h2>
+        <Bracket />
       </div>
     </div>
   );

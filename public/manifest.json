@@ -1,0 +1,16 @@
+{
+  "name": "El Gran Coliseo",
+  "short_name": "Coliseo",
+  "description": "Torneo de Dota 2",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/twitter-image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

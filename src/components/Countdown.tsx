@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export function Countdown({ target }: { target: string }) {
+export function Countdown({ target, children }: { target: string, children?: React.ReactNode }) {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
@@ -37,8 +37,11 @@ export function Countdown({ target }: { target: string }) {
 
   if (timeLeft === "EN VIVO AHORA") {
     return (
-      <div className="font-serif text-3xl md:text-5xl font-bold tracking-widest text-[#53FC18] drop-shadow-[0_0_12px_rgba(83,252,24,0.6)]">
-        {timeLeft}
+      <div className="w-full flex flex-col items-center gap-8">
+        <div className="font-serif text-3xl md:text-5xl font-bold tracking-widest text-[#53FC18] drop-shadow-[0_0_12px_rgba(83,252,24,0.6)]">
+          {timeLeft}
+        </div>
+        {children}
       </div>
     );
   }

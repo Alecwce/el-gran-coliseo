@@ -25,9 +25,22 @@ export default function Home() {
             EL GRAN COLISEO DE BENJAZ
           </h1>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 w-full">
             <p className="text-sm tracking-widest text-gray-400 uppercase">La batalla comienza en</p>
-            <Countdown target="2026-04-27T14:00:00-05:00" />
+            <Countdown target="2026-04-27T14:00:00-05:00">
+              <div className="w-full aspect-video mt-8 max-w-4xl mx-auto">
+                <iframe
+                  src="https://player.kick.com/benjaz"
+                  height="100%"
+                  width="100%"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowFullScreen={true}
+                  sandbox="allow-scripts allow-same-origin"
+                  className="w-full h-full border border-[#D4AF37]/50 shadow-[0_0_30px_rgba(83,252,24,0.15)]"
+                ></iframe>
+              </div>
+            </Countdown>
           </div>
 
           <a

@@ -1,6 +1,6 @@
-export default function ReplaysPage() {
-  const placeholders = Array.from({ length: 6 });
+import { replays } from "@/data/replays";
 
+export default function ReplaysPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
@@ -11,26 +11,25 @@ export default function ReplaysPage() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {placeholders.map((_, idx) => (
+        {replays.map((replay) => (
           <div
-            key={idx}
-            className="flex flex-col border border-[#D4AF37] bg-[#191B1F] p-6 text-center"
+            key={replay.id}
+            className="flex flex-col border border-[#D4AF37] bg-white dark:bg-[#191B1F] p-6 text-center"
           >
-            {/* Video Thumbnail Placeholder */}
-            <div className="mb-6 flex aspect-video w-full flex-col items-center justify-center border border-dashed border-[#D4AF37]/30 bg-[#0A0A0A]">
-               <span className="text-sm font-bold uppercase tracking-widest text-[#D4AF37]/50">
-                 VOD no disponible
-               </span>
+            <div className="mb-6 flex aspect-video w-full flex-col items-center justify-center border border-[#D4AF37]/30 bg-[#0A0A0A]">
+               <iframe
+                 width="100%"
+                 height="100%"
+                 src={`https://www.youtube.com/embed/${replay.videoId}`}
+                 title={replay.title}
+                 frameBorder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                 allowFullScreen
+               ></iframe>
             </div>
             
-            <h2 className="mb-6 font-serif text-2xl font-bold text-white uppercase">Próximamente</h2>
-            
-            <button
-              disabled
-              className="mt-auto flex w-full cursor-not-allowed items-center justify-center border-2 border-gray-600 bg-transparent px-6 py-3 font-sans font-bold uppercase tracking-wider text-gray-500 opacity-50"
-            >
-              Ver VOD
-            </button>
+            <h2 className="mb-2 font-serif text-xl font-bold text-black dark:text-white uppercase">{replay.title}</h2>
+            <p className="mb-6 text-sm text-[#0066FF] dark:text-[#53FC18] font-bold tracking-widest">{replay.date}</p>
           </div>
         ))}
       </div>

@@ -15,6 +15,8 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 });
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export const metadata: Metadata = {
   title: 'El Gran Coliseo de Benjaz | Torneo Dota 2 $20,000 USD',
   description: 'Sigue en vivo del 27 abril al 3 mayo 2026 el torneo de Benjaz en Kick. 12 equipos, $20,000 USD, formato Bo1/Bo3/Bo5.',
@@ -31,6 +33,7 @@ export const metadata: Metadata = {
   other: {
     'fb:app_id': ''
   },
+  manifest: '/manifest.json',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://el-gran-coliseo.netlify.app'),
 };
 
@@ -40,13 +43,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`dark ${inter.variable} ${newsreader.variable}`}>
-      <body className="antialiased min-h-screen bg-[#0A0A0A] text-white font-sans flex flex-col">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+    <html lang="es" suppressHydrationWarning className={`${inter.variable} ${newsreader.variable}`}>
+      <body className="antialiased min-h-screen bg-[#0A0A0A] text-white font-sans flex flex-col dark:bg-[#0A0A0A] dark:text-white bg-white text-black transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
