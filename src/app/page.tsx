@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
       {/* Hero Section */}
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden border-b border-[#D4AF37]/20 bg-[#0A0A0A] px-4 py-24 text-center">
+      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden border-b border-[#B8860B] dark:border-[#D4AF37]/20 bg-white dark:bg-[#0A0A0A] px-4 py-24 text-center">
         {/* Background gradient/texture placeholder */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#191B1F] via-[#0A0A0A] to-[#0A0A0A] opacity-80" />
         
@@ -21,12 +21,12 @@ export default function Home() {
             <span className="text-xs uppercase tracking-widest">92.4K EN KICK • EN VIVO</span>
           </div>
 
-          <h1 className="max-w-4xl font-serif text-5xl font-extrabold tracking-tight text-[#D4AF37] sm:text-7xl">
+          <h1 className="max-w-4xl font-serif text-5xl font-extrabold tracking-tight text-[#B8860B] dark:text-[#D4AF37] sm:text-7xl">
             EL GRAN COLISEO DE BENJAZ
           </h1>
 
           <div className="flex flex-col items-center gap-4 w-full">
-            <p className="text-sm tracking-widest text-gray-400 uppercase">La batalla comienza en</p>
+            <p className="text-sm tracking-widest text-gray-600 dark:text-gray-400 uppercase">La batalla comienza en</p>
             <Countdown target="2026-04-27T14:00:00-05:00">
               <div className="w-full aspect-video mt-8 max-w-4xl mx-auto">
                 <iframe
@@ -37,7 +37,7 @@ export default function Home() {
                   scrolling="no"
                   allowFullScreen={true}
                   sandbox="allow-scripts allow-same-origin"
-                  className="w-full h-full border border-[#D4AF37]/50 shadow-[0_0_30px_rgba(83,252,24,0.15)]"
+                  className="w-full h-full border border-[#B8860B] dark:border-[#D4AF37]/50 shadow-[0_0_30px_rgba(83,252,24,0.15)]"
                 ></iframe>
               </div>
             </Countdown>
@@ -56,7 +56,7 @@ export default function Home() {
 
       {/* Formato Section */}
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-center font-serif text-3xl font-bold uppercase tracking-widest text-[#D4AF37]">
+        <h2 className="mb-8 text-center font-serif text-3xl font-bold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37]">
           Formato del Torneo
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
@@ -67,13 +67,13 @@ export default function Home() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="group border border-[#D4AF37] bg-[#191B1F] p-6 transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+              className="group border border-[#B8860B] dark:border-[#D4AF37] bg-white dark:bg-[#191B1F] p-6 transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
             >
-              <div className="mb-4 inline-block bg-[#0A0A0A] px-3 py-1 text-sm font-bold text-[#D4AF37] border border-[#D4AF37]/50">
+              <div className="mb-4 inline-block bg-white dark:bg-[#0A0A0A] px-3 py-1 text-sm font-bold text-[#B8860B] dark:text-[#D4AF37] border border-[#B8860B] dark:border-[#D4AF37]/50">
                 {item.bo}
               </div>
-              <h3 className="mb-2 font-serif text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-sm text-gray-400">{item.desc}</p>
+              <h3 className="mb-2 font-serif text-xl font-bold text-gray-900 dark:text-white">{item.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
       {/* Horario Hoy Section */}
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-end justify-between">
-          <h2 className="font-serif text-3xl font-bold uppercase tracking-widest text-[#D4AF37]">
+          <h2 className="font-serif text-3xl font-bold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37]">
             Horario de Hoy
           </h2>
           <Link href="/horario" className="text-sm font-bold text-[#0066FF] hover:underline uppercase tracking-widest">
@@ -90,23 +90,23 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="overflow-x-auto border border-[#D4AF37]">
+        <div className="overflow-x-auto border border-[#B8860B] dark:border-[#D4AF37]">
           <table className="w-full text-left text-sm">
             <thead className="bg-[#0066FF] text-white">
               <tr>
-                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#D4AF37]/50">Hora</th>
-                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#D4AF37]/50">Equipo 1</th>
-                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#D4AF37]/50">Equipo 2</th>
-                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-[#D4AF37]/50">Fase</th>
+                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#B8860B] dark:border-[#D4AF37]/50">Hora</th>
+                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#B8860B] dark:border-[#D4AF37]/50">Equipo 1</th>
+                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-r border-[#B8860B] dark:border-[#D4AF37]/50">Equipo 2</th>
+                <th className="px-4 py-3 font-bold uppercase tracking-wider border-b border-[#B8860B] dark:border-[#D4AF37]/50">Fase</th>
               </tr>
             </thead>
-            <tbody className="bg-[#191B1F]">
+            <tbody className="bg-white dark:bg-[#191B1F]">
               {todaysMatches.map((match, idx) => (
-                <tr key={idx} className="border-b border-[#D4AF37]/30 last:border-0 hover:bg-[#201f1f]">
-                  <td className="px-4 py-4 font-bold text-[#D4AF37] border-r border-[#D4AF37]/30">{match.time}</td>
-                  <td className="px-4 py-4 font-semibold text-white border-r border-[#D4AF37]/30">{match.team1}</td>
-                  <td className="px-4 py-4 font-semibold text-white border-r border-[#D4AF37]/30">{match.team2}</td>
-                  <td className="px-4 py-4 text-gray-300">{match.stage} (BO{match.bo})</td>
+                <tr key={idx} className="border-b border-[#B8860B] dark:border-[#D4AF37]/30 last:border-0 hover:bg-gray-100 dark:hover:bg-[#201f1f]">
+                  <td className="px-4 py-4 font-bold text-[#B8860B] dark:text-[#D4AF37] border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.time}</td>
+                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.team1}</td>
+                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.team2}</td>
+                  <td className="px-4 py-4 text-gray-600 dark:text-gray-300">{match.stage} (BO{match.bo})</td>
                 </tr>
               ))}
               {todaysMatches.length === 0 && (

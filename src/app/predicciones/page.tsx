@@ -32,19 +32,19 @@ export default function PrediccionesPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
-        <h1 className="font-serif text-4xl font-extrabold uppercase tracking-widest text-[#D4AF37] md:text-5xl">
+        <h1 className="font-serif text-4xl font-extrabold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37] md:text-5xl">
           Predicciones
         </h1>
-        <p className="mt-4 text-gray-400 text-lg">¿Quién se coronará campeón del Gran Coliseo?</p>
+        <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">¿Quién se coronará campeón del Gran Coliseo?</p>
       </div>
 
-      <div className="border border-[#D4AF37] bg-white dark:bg-[#191B1F] p-8 text-center max-w-2xl mx-auto shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+      <div className="border border-[#B8860B] dark:border-[#D4AF37] bg-white dark:bg-[#191B1F] p-8 text-center max-w-2xl mx-auto shadow-[0_0_20px_rgba(212,175,55,0.1)]">
         {voted ? (
           <div className="py-8">
-            <h2 className="text-2xl font-bold text-black dark:text-white mb-4 uppercase">¡Tu voto ha sido registrado!</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 uppercase">¡Tu voto ha sido registrado!</h2>
             <p className="text-[#0066FF] dark:text-[#53FC18] font-bold text-xl mb-8 tracking-widest">Apostaste por: {selectedTeam}</p>
-            <div className="inline-block bg-gray-100 dark:bg-[#0A0A0A] border border-[#D4AF37]/50 px-6 py-4 mb-8">
-              <span className="text-xl font-serif text-[#D4AF37] font-bold">{total} gladiadores han votado</span>
+            <div className="inline-block bg-gray-100 dark:bg-[#0A0A0A] border border-[#B8860B] dark:border-[#D4AF37]/50 px-6 py-4 mb-8">
+              <span className="text-xl font-serif text-[#B8860B] dark:text-[#D4AF37] font-bold">{total} gladiadores han votado</span>
             </div>
             <div>
               <a
@@ -59,14 +59,14 @@ export default function PrediccionesPage() {
           </div>
         ) : (
           <div className="flex flex-col gap-6">
-            <label htmlFor="team-select" className="text-left font-bold text-black dark:text-white uppercase tracking-widest text-sm">
+            <label htmlFor="team-select" className="text-left font-bold text-gray-900 dark:text-white uppercase tracking-widest text-sm">
               Selecciona tu equipo ganador:
             </label>
             <select
               id="team-select"
               value={selectedTeam}
               onChange={(e) => setSelectedTeam(e.target.value)}
-              className="w-full bg-gray-50 dark:bg-[#0A0A0A] border-2 border-[#D4AF37]/50 p-4 text-black dark:text-white focus:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-gray-50 dark:bg-[#0A0A0A] border-2 border-[#B8860B] dark:border-[#D4AF37]/50 p-4 text-gray-900 dark:text-white focus:border-[#B8860B] dark:border-[#D4AF37] focus:outline-none transition-colors"
             >
               <option value="" disabled>-- Elige un equipo --</option>
               {teams.map(t => (

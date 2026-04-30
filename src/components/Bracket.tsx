@@ -23,16 +23,16 @@ export function Bracket() {
         {teamData ? (
           <Image src={`/logos/${teamData.logo}`} alt={name} width={24} height={24} className="object-contain" />
         ) : (
-          <div className="w-6 h-6 bg-[#0A0A0A] border border-[#D4AF37]/30 rounded-full" />
+          <div className="w-6 h-6 bg-white dark:bg-[#0A0A0A] border border-[#B8860B] dark:border-[#D4AF37]/30 rounded-full" />
         )}
-        <span className="font-semibold text-white text-sm">{name}</span>
+        <span className="font-semibold text-gray-900 dark:text-white text-sm">{name}</span>
       </div>
     );
   };
 
   const MatchCard = ({ match }: { match: any }) => (
-    <div className="border border-[#D4AF37]/50 bg-[#191B1F] p-4 min-w-[240px] transition-colors hover:border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-      <div className="text-xs text-[#53FC18] font-bold uppercase tracking-widest mb-3 border-b border-[#D4AF37]/20 pb-2">{match.stage} - BO{match.bo}</div>
+    <div className="border border-[#B8860B] dark:border-[#D4AF37]/50 bg-white dark:bg-[#191B1F] p-4 min-w-[240px] transition-colors hover:border-[#B8860B] dark:hover:border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+      <div className="text-xs text-[#53FC18] font-bold uppercase tracking-widest mb-3 border-b border-[#B8860B] dark:border-[#D4AF37]/20 pb-2">{match.stage} - BO{match.bo}</div>
       <div className="flex justify-between items-center mb-3">
         <TeamRow name={match.team1 || match.teamA || "TBD"} />
       </div>

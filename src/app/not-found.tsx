@@ -3,13 +3,13 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="flex min-h-[calc(100vh-160px)] flex-col items-center justify-center px-4 text-center">
-      <h1 className="font-serif text-6xl font-extrabold uppercase tracking-widest text-[#D4AF37] md:text-8xl">
+      <h1 className="font-serif text-6xl font-extrabold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37] md:text-8xl">
         404
       </h1>
-      <h2 className="mt-4 font-serif text-3xl font-bold uppercase tracking-widest text-[#D4AF37] md:text-4xl">
+      <h2 className="mt-4 font-serif text-3xl font-bold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37] md:text-4xl">
         Gladiador perdido
       </h2>
-      <p className="mt-6 max-w-md mx-auto text-lg text-gray-400">
+      <p className="mt-6 max-w-md mx-auto text-lg text-gray-600 dark:text-gray-400">
         Te has desviado del camino hacia la arena. Esta zona del coliseo no existe o fue destruida en batalla.
       </p>
       <Link 
