@@ -6,23 +6,27 @@ import { teams } from "@/data/teams";
 export default function PrediccionesPage() {
   const [selectedTeam, setSelectedTeam] = useState("");
   const [voted, setVoted] = useState(false);
-  const [votesCount, setVotesCount] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const saved = localStorage.getItem("predictedTeam");
-    if (saved) {
-      setSelectedTeam(saved);
+    const savedTeam = localStorage.getItem("predictedTeam");
+    if (savedTeam) {
+      setSelectedTeam(savedTeam);
       setVoted(true);
     }
-    const baseVotes = 1337;
-    setVotesCount(saved ? baseVotes + 1 : baseVotes);
+    
+    const saved = localStorage.getItem('coliseo-predictions-total');
+    setTotal(saved ? parseInt(saved) : 0);
   }, []);
 
   const handleVote = () => {
     if (!selectedTeam) return;
     localStorage.setItem("predictedTeam", selectedTeam);
     setVoted(true);
-    setVotesCount(prev => prev + 1);
+    
+    const newTotal = total + 1;
+    localStorage.setItem('coliseo-predictions-total', String(newTotal));
+    setTotal(newTotal);
   };
 
   return (
@@ -40,8 +44,7 @@ export default function PrediccionesPage() {
             <h2 className="text-2xl font-bold text-black dark:text-white mb-4 uppercase">¡Tu voto ha sido registrado!</h2>
             <p className="text-[#0066FF] dark:text-[#53FC18] font-bold text-xl mb-8 tracking-widest">Apostaste por: {selectedTeam}</p>
             <div className="inline-block bg-gray-100 dark:bg-[#0A0A0A] border border-[#D4AF37]/50 px-6 py-4">
-              <span className="block text-sm text-gray-500 uppercase tracking-wider mb-2">Gladiadores que han votado</span>
-              <span className="text-4xl font-serif text-[#D4AF37] font-bold">{votesCount.toLocaleString()}</span>
+              <span className="text-xl font-serif text-[#D4AF37] font-bold">{total} gladiadores han votado</span>
             </div>
           </div>
         ) : (
@@ -68,7 +71,7 @@ export default function PrediccionesPage() {
               Confirmar Predicción
             </button>
             <div className="mt-4 text-sm text-gray-500 uppercase tracking-widest">
-              Votos actuales: {votesCount.toLocaleString()}
+              {total} gladiadores han votado
             </div>
           </div>
         )}

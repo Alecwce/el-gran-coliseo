@@ -44,8 +44,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning className={`${inter.variable} ${newsreader.variable}`}>
-      <body className="antialiased min-h-screen bg-[#0A0A0A] text-white font-sans flex flex-col dark:bg-[#0A0A0A] dark:text-white bg-white text-black transition-colors duration-300">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <body className="bg-[#0A0A0A] text-white dark:bg-[#0A0A0A] dark:text-white font-sans antialiased min-h-screen flex flex-col transition-colors duration-300">
+        <ThemeProvider>
           <Header />
           <main className="flex-1">
             {children}
