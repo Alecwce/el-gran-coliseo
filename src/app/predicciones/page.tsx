@@ -43,8 +43,18 @@ export default function PrediccionesPage() {
           <div className="py-8">
             <h2 className="text-2xl font-bold text-black dark:text-white mb-4 uppercase">¡Tu voto ha sido registrado!</h2>
             <p className="text-[#0066FF] dark:text-[#53FC18] font-bold text-xl mb-8 tracking-widest">Apostaste por: {selectedTeam}</p>
-            <div className="inline-block bg-gray-100 dark:bg-[#0A0A0A] border border-[#D4AF37]/50 px-6 py-4">
+            <div className="inline-block bg-gray-100 dark:bg-[#0A0A0A] border border-[#D4AF37]/50 px-6 py-4 mb-8">
               <span className="text-xl font-serif text-[#D4AF37] font-bold">{total} gladiadores han votado</span>
+            </div>
+            <div>
+              <a
+                href={`/api/og/prediccion?team=${encodeURIComponent(selectedTeam)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full max-w-sm bg-[#0066FF] text-white font-bold uppercase tracking-widest py-4 hover:bg-[#0055DD] transition-colors"
+              >
+                Compartir Predicción
+              </a>
             </div>
           </div>
         ) : (

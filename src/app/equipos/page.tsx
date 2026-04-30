@@ -1,5 +1,54 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { teams } from "@/data/teams";
+import { rosters } from "@/data/rosters";
+
+import Link from "next/link";
+
+function TeamCard({ team }: { team: typeof teams[0] }) {
+  const teamRoster = rosters[team.id as keyof typeof rosters];
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <div 
+      className="group h-[320px] [perspective:1000px] cursor-pointer"
+      onClick={() => setFlipped(!flipped)}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+    >
+      <div 
+        className={`relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? '[transform:rotateY(180deg)]' : ''}`}
+      >
+        {/* FRENTE */}
+        <div className="absolute inset-0 [backface-visibility:hidden] bg-[#111] rounded-xl border border-[#D4AF37]/30 flex flex-col items-center justify-center p-6 shadow-lg">
+          <Image src={`/logos/${team.logo}`} width={140} height={140} alt={team.name} className="drop-shadow-md" />
+          <h3 className="mt-6 text-xl font-bold text-[#D4AF37] uppercase text-center">{team.name}</h3>
+          <p className="mt-2 text-sm text-gray-400 font-bold uppercase tracking-widest">Grupo {team.group}</p>
+        </div>
+        
+        {/* ATRÁS */}
+        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0A0A0A] rounded-xl border-2 border-[#D4AF37] p-6 flex flex-col shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+          <h3 className="text-lg font-bold text-[#D4AF37] mb-4 uppercase text-center border-b border-[#D4AF37]/30 pb-2">{team.name}</h3>
+          <ul className="space-y-2 text-sm flex-1 overflow-y-auto">
+            {teamRoster?.players.map((p, i) => (
+              <li key={i} className="flex justify-between items-center border-b border-gray-800 pb-1 hover:bg-[#D4AF37]/10 transition-colors">
+                <span className="text-gray-500 font-bold text-xs">{i + 1}.</span>
+                <Link href={`/jugador/${encodeURIComponent(p)}`} className="text-[#0066FF] hover:text-[#53FC18] font-medium tracking-wide transition-colors">
+                  {p}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 pt-3 border-t border-[#D4AF37]/30 text-center text-xs font-bold uppercase tracking-widest text-[#D4AF37]/70">
+            El Gran Coliseo
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function EquiposPage() {
   return (
@@ -12,29 +61,8 @@ export default function EquiposPage() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {teams.map((team, idx) => (
-          <div
-            key={team.id}
-            className="group flex flex-col border border-[#D4AF37]/50 bg-[#191B1F] transition-all duration-300 hover:scale-105 hover:border-[#D4AF37] hover:shadow-[0_0_25px_rgba(212,175,55,0.6)]"
-          >
-            <div className="flex aspect-square items-center justify-center bg-[#0A0A0A] p-6">
-              <Image
-                src={`/logos/${team.logo}`}
-                alt={team.name}
-                width={300}
-                height={300}
-                priority={idx < 4}
-                className="h-full w-full object-contain drop-shadow-md"
-              />
-            </div>
-            
-            <div className="flex flex-col border-t border-[#D4AF37]/50 p-4 text-center transition-colors duration-300 group-hover:border-[#D4AF37]">
-              <span className="mb-1 text-xs font-bold uppercase tracking-widest text-[#0066FF]">
-                Grupo {team.group}
-              </span>
-              <h2 className="font-sans text-lg font-bold text-white uppercase">{team.name}</h2>
-            </div>
-          </div>
+        {teams.map((team) => (
+          <TeamCard key={team.id} team={team} />
         ))}
       </div>
     </div>
