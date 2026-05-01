@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
       {/* Hero Section */}
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden border-b border-[#B8860B] dark:border-[#D4AF37]/20 bg-white dark:bg-[#0A0A0A] px-4 py-24 text-center">
-        {/* Background gradient/texture placeholder */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#191B1F] via-[#0A0A0A] to-[#0A0A0A] opacity-80" />
-        
+      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden border-b border-[#B8860B] dark:border-[#D4AF37]/20 bg-gray-50 dark:bg-[#0A0A0A] px-4 py-24 text-center">
+        {/* Background gradient — solo dark */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#191B1F] via-[#0A0A0A] to-[#0A0A0A] opacity-0 dark:opacity-80" />
+
         <div className="relative z-10 flex flex-col items-center gap-8">
           <div className="flex items-center gap-2 rounded-none bg-[#53FC18] px-3 py-1 font-bold text-[#0A0A0A]">
             <span className="relative flex h-2 w-2">
@@ -69,7 +69,7 @@ export default function Home() {
               key={idx}
               className="group border border-[#B8860B] dark:border-[#D4AF37] bg-white dark:bg-[#191B1F] p-6 transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
             >
-              <div className="mb-4 inline-block bg-white dark:bg-[#0A0A0A] px-3 py-1 text-sm font-bold text-[#B8860B] dark:text-[#D4AF37] border border-[#B8860B] dark:border-[#D4AF37]/50">
+              <div className="mb-4 inline-block bg-gray-50 dark:bg-[#0A0A0A] px-3 py-1 text-sm font-bold text-[#B8860B] dark:text-[#D4AF37] border border-[#B8860B] dark:border-[#D4AF37]/50">
                 {item.bo}
               </div>
               <h3 className="mb-2 font-serif text-xl font-bold text-gray-900 dark:text-white">{item.title}</h3>
@@ -102,10 +102,10 @@ export default function Home() {
             </thead>
             <tbody className="bg-white dark:bg-[#191B1F]">
               {todaysMatches.map((match, idx) => (
-                <tr key={idx} className="border-b border-[#B8860B] dark:border-[#D4AF37]/30 last:border-0 hover:bg-gray-100 dark:hover:bg-[#201f1f]">
-                  <td className="px-4 py-4 font-bold text-[#B8860B] dark:text-[#D4AF37] border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.time}</td>
-                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.team1}</td>
-                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-[#B8860B] dark:border-[#D4AF37]/30">{match.team2}</td>
+                <tr key={idx} className="border-b border-gray-200 dark:border-gray-800/50 last:border-0 hover:bg-gray-50 dark:hover:bg-[#201f1f]">
+                  <td className="px-4 py-4 font-bold text-[#B8860B] dark:text-[#D4AF37] border-r border-gray-200 dark:border-gray-800/30">{match.time}</td>
+                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-800/30">{match.team1}</td>
+                  <td className="px-4 py-4 font-semibold text-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-800/30">{match.team2}</td>
                   <td className="px-4 py-4 text-gray-600 dark:text-gray-300">{match.stage} (BO{match.bo})</td>
                 </tr>
               ))}

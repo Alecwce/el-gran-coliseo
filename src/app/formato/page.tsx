@@ -44,7 +44,7 @@ export default function FormatoPage() {
               <span className="text-[#0066FF] font-bold uppercase tracking-widest text-sm">{item.date}</span>
             </div>
             <h2 className="mb-4 font-serif text-3xl font-bold text-gray-900 dark:text-white uppercase">{item.title}</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">{item.desc}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

@@ -66,7 +66,7 @@ export default function PrediccionesPage() {
               id="team-select"
               value={selectedTeam}
               onChange={(e) => setSelectedTeam(e.target.value)}
-              className="w-full bg-gray-50 dark:bg-[#0A0A0A] border-2 border-[#B8860B] dark:border-[#D4AF37]/50 p-4 text-gray-900 dark:text-white focus:border-[#B8860B] dark:border-[#D4AF37] focus:outline-none transition-colors"
+              className="w-full bg-gray-50 dark:bg-[#0A0A0A] border-2 border-[#B8860B] dark:border-[#D4AF37]/50 p-4 text-gray-900 dark:text-white focus:border-[#D4AF37] focus:outline-none transition-colors"
             >
               <option value="" disabled>-- Elige un equipo --</option>
               {teams.map(t => (

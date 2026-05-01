@@ -14,7 +14,7 @@ export default function ReplaysPage() {
         {replays.map((replay) => (
           <div
             key={replay.id}
-            className="flex flex-col border border-[#B8860B] dark:border-[#D4AF37] bg-white dark:bg-white dark:bg-[#191B1F] p-6 transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            className="flex flex-col border border-[#B8860B] dark:border-[#D4AF37] bg-white dark:bg-[#191B1F] p-6 transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
           >
             <div className="mb-4 flex items-start justify-between">
               <div>
