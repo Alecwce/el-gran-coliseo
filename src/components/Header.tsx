@@ -66,37 +66,37 @@ export function Header() {
           <Link href="/horario" className={navLinkClass}>Horario</Link>
           <Link href="/replays" className={navLinkClass}>Replays</Link>
           <Link href="/predicciones" className={navLinkClass}>Predicciones</Link>
-          <a href="https://kick.com/benjaz" target="_blank" rel="noopener" className={kickLinkClass}>Ver en Kick</a>
+          <a href="https://kick.com/benjaz" target="_blank" rel="noopener noreferrer" className={kickLinkClass}>Ver en Kick</a>
 
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="ml-4 p-2 text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? "🌞" : "🌙"}
-            </button>
-          )}
+          <button
+            onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
+            className={`ml-4 p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
+            aria-label="Toggle theme"
+          >
+            <span className="w-5 h-5 inline-flex items-center justify-center">
+              {!mounted || theme === "dark" ? "🌞" : "🌙"}
+            </span>
+          </button>
         </nav>
 
         {/* Mobile Menu Button & Theme */}
         <div className="flex items-center md:hidden gap-4">
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? "🌞" : "🌙"}
-            </button>
-          )}
+          <button
+            onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
+            className={`p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
+            aria-label="Toggle theme"
+          >
+            <span className="w-5 h-5 inline-flex items-center justify-center">
+              {!mounted || theme === "dark" ? "🌞" : "🌙"}
+            </span>
+          </button>
           <button
             type="button"
             aria-label="Abrir menú"
             onClick={toggleMenu}
-            className="text-[#B8860B] dark:text-[#D4AF37] focus:outline-none"
+            className="text-[#B8860B] dark:text-[#D4AF37] focus:outline-none min-w-[48px] min-h-[48px] flex items-center justify-center"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -120,7 +120,7 @@ export function Header() {
           <Link href="/horario" onClick={toggleMenu} className={mobileLinkClass}>Horario</Link>
           <Link href="/replays" onClick={toggleMenu} className={mobileLinkClass}>Replays</Link>
           <Link href="/predicciones" onClick={toggleMenu} className={mobileLinkClass}>Predicciones</Link>
-          <a href="https://kick.com/benjaz" target="_blank" rel="noopener" onClick={toggleMenu} className="text-lg font-bold uppercase tracking-widest text-[#0066FF] dark:text-[#53FC18] hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors">Ver en Kick</a>
+          <a href="https://kick.com/benjaz" target="_blank" rel="noopener noreferrer" onClick={toggleMenu} className="text-lg font-bold uppercase tracking-widest text-[#0066FF] dark:text-[#53FC18] hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors">Ver en Kick</a>
         </nav>
       </div>
 

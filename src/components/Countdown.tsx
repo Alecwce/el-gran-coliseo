@@ -33,7 +33,7 @@ export function Countdown({ target, children }: { target: string, children?: Rea
     return () => clearInterval(interval);
   }, [target]);
 
-  if (!timeLeft) return <div className="h-8 font-serif text-3xl font-bold tracking-widest text-[#B8860B] dark:text-[#D4AF37]">--:--:--:--</div>;
+  if (!timeLeft) return <div className="font-serif text-3xl md:text-5xl font-bold tracking-widest text-[#B8860B] dark:text-[#D4AF37] min-w-[14ch] text-center">--:--:--:--</div>;
 
   if (timeLeft === "EN VIVO AHORA") {
     return (

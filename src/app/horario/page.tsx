@@ -183,7 +183,7 @@ export default function HorarioPage() {
             <button
               key={day.date}
               onClick={() => setActiveDay(day.date)}
-              className={`px-4 py-2 font-bold uppercase tracking-widest transition-all text-sm border ${
+              className={`px-4 py-3 min-h-[48px] font-bold uppercase tracking-widest transition-all text-sm border ${
                 activeDay === day.date
                   ? "bg-[#D4AF37] text-black border-[#B8860B] dark:border-[#D4AF37]"
                   : "bg-gray-100 dark:bg-black/50 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-800 hover:border-[#B8860B] dark:hover:border-[#D4AF37]/50 hover:text-gray-900 dark:hover:text-white"

@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'cdn.steamusercontent.com' },
       { protocol: 'https', hostname: 'steamcdn-a.akamaihd.net' },
       { protocol: 'https', hostname: 'api.opendota.com' },
-      { protocol: 'https', hostname: '**' }
     ],
   },
 }
