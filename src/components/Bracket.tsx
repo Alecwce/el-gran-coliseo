@@ -11,11 +11,12 @@ type BracketMatch = {
 
 const upperSF: BracketMatch[] = [
   { stage: "Upper Bracket SF", stageLabel: "UPPER SF 1", bo: 3, team1: "The Bot$", team2: "WK Bear and Bones" },
-  { stage: "Upper Bracket SF", stageLabel: "UPPER SF 2", bo: 3, team1: "Team Peyitaz", team2: "Los Bemboyz" },
+  { stage: "Upper Bracket SF", stageLabel: "UPPER SF 2", bo: 3, team1: "Team Peyitaz", team2: "Gotto House" },
 ];
 
-const lowerSF: BracketMatch[] = [
-  { stage: "Lower Bracket SF", stageLabel: "LOWER SF", bo: 3, team1: "The Monsters", team2: "The Blacklist" },
+const lowerQF: BracketMatch[] = [
+  { stage: "Lower Bracket QF", stageLabel: "LOWER QF 1", bo: 3, team1: "TBD", team2: "The Monsters" },
+  { stage: "Lower Bracket QF", stageLabel: "LOWER QF 2", bo: 3, team1: "TBD", team2: "The Blacklist" },
 ];
 
 const upperFinal: BracketMatch[] = [
@@ -87,7 +88,7 @@ export function Bracket() {
 
       <div className="relative z-10 overflow-x-auto hide-scrollbar">
         {/* Sección labels */}
-        <div className="min-w-[900px] flex gap-16 mb-4 px-2">
+        <div className="min-w-[1100px] flex gap-12 mb-4 px-2">
           <div className="min-w-[240px] text-center">
             <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Semifinales</span>
           </div>
@@ -100,7 +101,7 @@ export function Bracket() {
         </div>
 
         {/* Upper Bracket */}
-        <div className="min-w-[900px] flex gap-16">
+        <div className="min-w-[1100px] flex gap-12">
           <div className="flex flex-col gap-8 justify-around">
             {upperSF.map((m, i) => <MatchCard key={`usf-${i}`} match={m} />)}
           </div>
@@ -113,9 +114,9 @@ export function Bracket() {
         </div>
 
         {/* Lower Bracket */}
-        <div className="min-w-[900px] flex gap-16 mt-12">
+        <div className="min-w-[1100px] flex gap-12 mt-12">
           <div className="flex flex-col gap-8 justify-around">
-            {lowerSF.map((m, i) => <MatchCard key={`lsf-${i}`} match={m} />)}
+            {lowerQF.map((m, i) => <MatchCard key={`lqf-${i}`} match={m} />)}
           </div>
           <div className="flex flex-col gap-8 justify-around">
             {lowerFinal.map((m, i) => <MatchCard key={`lf-${i}`} match={m} />)}
