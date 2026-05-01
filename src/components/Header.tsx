@@ -51,62 +51,62 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-[#B8860B] dark:border-[#D4AF37]/20 bg-white/90 dark:bg-black/90 backdrop-blur-md">
-        <MatchTicker />
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center">
-            <Link href="/" className="font-serif text-2xl font-bold tracking-wider text-[#B8860B] dark:text-[#D4AF37]" onClick={() => setIsMenuOpen(false)}>
-              EL GRAN COLISEO
-            </Link>
-          </div>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 items-center">
-            <Link href="/formato" className={navLinkClass}>Formato</Link>
-            <Link href="/equipos" className={navLinkClass}>Equipos</Link>
-            <Link href="/posiciones" className={navLinkClass}>Posiciones</Link>
-            <Link href="/horario" className={navLinkClass}>Horario</Link>
-            <Link href="/replays" className={navLinkClass}>Replays</Link>
-            <Link href="/predicciones" className={navLinkClass}>Predicciones</Link>
-            <a href="https://kick.com/benjaz" target="_blank" rel="noopener noreferrer" className={kickLinkClass}>Ver en Kick</a>
-
-            <button
-              onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
-              className={`ml-4 p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
-              aria-label="Toggle theme"
-            >
-              <span className="w-5 h-5 inline-flex items-center justify-center">
-                {!mounted || theme === "dark" ? "🌞" : "🌙"}
-              </span>
-            </button>
-          </nav>
-
-          {/* Mobile Menu Button & Theme */}
-          <div className="flex items-center md:hidden gap-4">
-            <button
-              onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
-              className={`p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
-              aria-label="Toggle theme"
-            >
-              <span className="w-5 h-5 inline-flex items-center justify-center">
-                {!mounted || theme === "dark" ? "🌞" : "🌙"}
-              </span>
-            </button>
-            <button
-              type="button"
-              aria-label="Abrir menú"
-              onClick={toggleMenu}
-              className="text-[#B8860B] dark:text-[#D4AF37] focus:outline-none min-w-[48px] min-h-[48px] flex items-center justify-center"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+      <MatchTicker />
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center">
+          <Link href="/" className="font-serif text-2xl font-bold tracking-wider text-[#B8860B] dark:text-[#D4AF37]" onClick={() => setIsMenuOpen(false)}>
+            EL GRAN COLISEO
+          </Link>
         </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-8 items-center">
+          <Link href="/formato" className={navLinkClass}>Formato</Link>
+          <Link href="/equipos" className={navLinkClass}>Equipos</Link>
+          <Link href="/posiciones" className={navLinkClass}>Posiciones</Link>
+          <Link href="/horario" className={navLinkClass}>Horario</Link>
+          <Link href="/replays" className={navLinkClass}>Replays</Link>
+          <Link href="/predicciones" className={navLinkClass}>Predicciones</Link>
+          <a href="https://kick.com/benjaz" target="_blank" rel="noopener noreferrer" className={kickLinkClass}>Ver en Kick</a>
+
+          <button
+            onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
+            className={`ml-4 p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
+            aria-label="Toggle theme"
+          >
+            <span className="w-5 h-5 inline-flex items-center justify-center">
+              {!mounted || theme === "dark" ? "🌞" : "🌙"}
+            </span>
+          </button>
+        </nav>
+
+        {/* Mobile Menu Button & Theme */}
+        <div className="flex items-center md:hidden gap-4">
+          <button
+            onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
+            className={`p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-[#B8860B] dark:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-full transition-colors ${!mounted ? "invisible" : ""}`}
+            aria-label="Toggle theme"
+          >
+            <span className="w-5 h-5 inline-flex items-center justify-center">
+              {!mounted || theme === "dark" ? "🌞" : "🌙"}
+            </span>
+          </button>
+          <button
+            type="button"
+            aria-label="Abrir menú"
+            onClick={toggleMenu}
+            className="text-[#B8860B] dark:text-[#D4AF37] focus:outline-none min-w-[48px] min-h-[48px] flex items-center justify-center"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
       </header>
 
       {/* Mobile Drawer — fuera del header para evitar stacking context del backdrop-blur */}
@@ -126,7 +126,7 @@ export function Header() {
         </nav>
       </div>
 
-      {/* Overlay para cerrar el menú — también fuera del header */}
+      {/* Overlay para cerrar — también fuera del header */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 z-30 bg-black/50 md:hidden"
