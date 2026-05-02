@@ -53,7 +53,7 @@ function MiniMatchCard({ match }: { match: typeof schedule[0] }) {
 }
 
 export default function Home() {
-  const todaysMatches = schedule.filter((match) => match.date === "2026-04-27");
+  const todaysMatches = schedule.filter((match) => match.date === "2026-05-02");
 
   return (
     <div className="flex flex-col">
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
-              <span className="text-gray-600 dark:text-gray-300 tracking-[0.2em] text-xs uppercase">DÍA 1 — 27 DE ABRIL</span>
+              <span className="text-gray-600 dark:text-gray-300 tracking-[0.2em] text-xs uppercase">PLAYOFFS — 2 DE MAYO</span>
               <h2 className="font-serif text-3xl font-bold uppercase tracking-widest text-[#B8860B] dark:text-[#D4AF37]">
                 Partidos
               </h2>

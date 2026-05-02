@@ -77,10 +77,18 @@ const fullSchedule: ScheduleDay[] = [
     date: "1",
     label: "1 DE MAYO (PLAYOFFS)",
     matches: [
-      { time: "10:00", format: "AL MEJOR DE 3", team1: { name: "The Bot$", shortName: "THE BOT$" }, team2: { name: "WK Bear and Bones", shortName: "WK BEAR AND B." } },
-      { time: "13:00", format: "AL MEJOR DE 3", team1: { name: "Team Peyitaz", shortName: "T. PEYITAS" }, team2: { name: "Los Bemboyz", shortName: "LOS BEMBOYZ" } },
-      { time: "16:00", format: "AL MEJOR DE 3", team1: { name: "The Monsters", shortName: "T. MONSTERS" }, team2: { name: "The Blacklist", shortName: "T. BLACKLIST" } },
-      { time: "19:00", format: "AL MEJOR DE 3", team1: { name: "TBD", shortName: "UPPER FINAL" }, team2: { name: "TBD", shortName: "UPPER FINAL" } },
+      { time: "10:00", format: "AL MEJOR DE 3", team1: { name: "The Bot$", shortName: "THE BOT$" }, team2: { name: "WK Bear and Bones", shortName: "WK BEAR AND B." }, winner: "The Bot$" },
+      { time: "13:00", format: "AL MEJOR DE 3", team1: { name: "Team Peyitaz", shortName: "T. PEYITAS" }, team2: { name: "Gotto House", shortName: "GOTTO H." }, winner: "Gotto House" },
+      { time: "16:00", format: "AL MEJOR DE 3", team1: { name: "WK Bear and Bones", shortName: "WK BEAR AND B." }, team2: { name: "The Monsters", shortName: "T. MONSTERS" }, winner: "WK Bear and Bones" },
+      { time: "19:00", format: "AL MEJOR DE 3", team1: { name: "The Blacklist", shortName: "T. BLACKLIST" }, team2: { name: "Team Peyitaz", shortName: "T. PEYITAS" }, winner: "The Blacklist" },
+    ]
+  },
+  {
+    date: "2",
+    label: "2 DE MAYO (PLAYOFFS)",
+    matches: [
+      { time: "14:00", format: "AL MEJOR DE 3", team1: { name: "The Bot$", shortName: "THE BOT$" }, team2: { name: "Gotto House", shortName: "GOTTO H." } },
+      { time: "18:00", format: "AL MEJOR DE 3", team1: { name: "WK Bear and Bones", shortName: "WK BEAR AND B." }, team2: { name: "The Blacklist", shortName: "T. BLACKLIST" } },
     ]
   },
   {
@@ -117,7 +125,7 @@ function MatchCard({ match }: { match: Match }) {
         <div className={`relative h-16 w-16 md:h-24 md:w-24 shrink-0 bg-white dark:bg-[#0B0B0B] border ${
           team1Won ? "border-[#53FC18] shadow-[0_0_10px_rgba(83,252,24,0.3)]" : "border-[#B8860B]/50 dark:border-[#D4AF37]/30"
         }`}>
-          {t1 && <Image src={`/logos/${t1.logo}`} alt={t1.name} fill className="object-contain p-1" />}
+          {t1 && <Image src={`/logos/${t1.logo}`} alt={t1.name} fill className="object-contain p-1" sizes="96px" />}
         </div>
       </div>
 
@@ -134,7 +142,7 @@ function MatchCard({ match }: { match: Match }) {
         <div className={`relative h-16 w-16 md:h-24 md:w-24 shrink-0 bg-white dark:bg-[#0B0B0B] border ${
           team2Won ? "border-[#53FC18] shadow-[0_0_10px_rgba(83,252,24,0.3)]" : "border-[#B8860B]/50 dark:border-[#D4AF37]/30"
         }`}>
-          {t2 && <Image src={`/logos/${t2.logo}`} alt={t2.name} fill className="object-contain p-1" />}
+          {t2 && <Image src={`/logos/${t2.logo}`} alt={t2.name} fill className="object-contain p-1" sizes="96px" />}
         </div>
         <div className="flex flex-col items-center md:items-start">
           <span className={`text-[10px] md:text-sm font-bold uppercase tracking-wider mb-1 md:mb-2 text-center md:text-left ${
@@ -150,7 +158,7 @@ function MatchCard({ match }: { match: Match }) {
 }
 
 export default function HorarioPage() {
-  const [activeDay, setActiveDay] = useState("1");
+  const [activeDay, setActiveDay] = useState("2");
 
   const currentSchedule = fullSchedule.find(d => d.date === activeDay);
 

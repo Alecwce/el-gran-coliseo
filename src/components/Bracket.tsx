@@ -14,13 +14,17 @@ const upperSF: BracketMatch[] = [
   { stage: "Upper Bracket SF", stageLabel: "UPPER SF 2", bo: 3, team1: "Team Peyitaz", team2: "Gotto House" },
 ];
 
-const lowerQF: BracketMatch[] = [
-  { stage: "Lower Bracket QF", stageLabel: "LOWER QF 1", bo: 3, team1: "TBD", team2: "The Monsters" },
-  { stage: "Lower Bracket QF", stageLabel: "LOWER QF 2", bo: 3, team1: "TBD", team2: "The Blacklist" },
+const lowerR1: BracketMatch[] = [
+  { stage: "Lower Bracket R1", stageLabel: "LOWER R1 1", bo: 3, team1: "WK Bear and Bones", team2: "The Monsters" },
+  { stage: "Lower Bracket R1", stageLabel: "LOWER R1 2", bo: 3, team1: "The Blacklist", team2: "Team Peyitaz" },
+];
+
+const lowerSF: BracketMatch[] = [
+  { stage: "Lower Bracket SF", stageLabel: "LOWER SEMIFINAL", bo: 3, team1: "WK Bear and Bones", team2: "The Blacklist" },
 ];
 
 const upperFinal: BracketMatch[] = [
-  { stage: "Upper Bracket Final", stageLabel: "UPPER FINAL", bo: 3, team1: "TBD", team2: "TBD" },
+  { stage: "Upper Bracket Final", stageLabel: "UPPER FINAL", bo: 3, team1: "The Bot$", team2: "Gotto House" },
 ];
 
 const lowerFinal: BracketMatch[] = [
@@ -90,13 +94,13 @@ export function Bracket() {
         {/* Sección labels */}
         <div className="min-w-[1100px] flex gap-12 mb-4 px-2">
           <div className="min-w-[240px] text-center">
-            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Semifinales</span>
+            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 1 — Semifinales / R1</span>
           </div>
           <div className="min-w-[240px] text-center">
-            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Final Upper</span>
+            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 2 — Final UB / Semi LB</span>
           </div>
           <div className="min-w-[240px] text-center">
-            <span className="text-xs font-bold text-[#B8860B] dark:text-[#D4AF37] uppercase tracking-widest">Gran Final</span>
+            <span className="text-xs font-bold text-[#B8860B] dark:text-[#D4AF37] uppercase tracking-widest">May 3 — Gran Final / Final LB</span>
           </div>
         </div>
 
@@ -116,7 +120,10 @@ export function Bracket() {
         {/* Lower Bracket */}
         <div className="min-w-[1100px] flex gap-12 mt-12">
           <div className="flex flex-col gap-8 justify-around">
-            {lowerQF.map((m, i) => <MatchCard key={`lqf-${i}`} match={m} />)}
+            {lowerR1.map((m, i) => <MatchCard key={`lr1-${i}`} match={m} />)}
+          </div>
+          <div className="flex flex-col gap-8 justify-around">
+            {lowerSF.map((m, i) => <MatchCard key={`lsf-${i}`} match={m} />)}
           </div>
           <div className="flex flex-col gap-8 justify-around">
             {lowerFinal.map((m, i) => <MatchCard key={`lf-${i}`} match={m} />)}
