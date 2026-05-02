@@ -92,6 +92,7 @@ export default function Home() {
                   scrolling="no"
                   allowFullScreen={true}
                   sandbox="allow-scripts allow-same-origin"
+                  loading="lazy"
                   className="w-full h-full border border-[#B8860B] dark:border-[#D4AF37]/50 shadow-[0_0_30px_rgba(83,252,24,0.15)]"
                 ></iframe>
               </div>

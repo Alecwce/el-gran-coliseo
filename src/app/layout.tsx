@@ -19,6 +19,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: 'El Gran Coliseo de Benjaz | Torneo Dota 2 $20,000 USD',
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || 'https://coliseo-benjaz.vercel.app',
+  },
   description: 'Sigue en vivo del 27 de abril al 3 de mayo de 2026 el torneo de Benjaz en Kick. 12 equipos compiten por $20,000 USD en formato Bo1 grupos y Bo3/Bo5 playoffs. ¡Entra ya!',
   keywords: ['Dota 2', 'Benjaz', 'Coliseo', 'torneo', 'Kick'],
   openGraph: {

@@ -29,8 +29,8 @@ function MatchTicker() {
   }, []);
 
   return (
-    <div className="w-full bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest py-1.5 px-4 text-center overflow-hidden whitespace-nowrap">
-      <span className="inline-block animate-pulse">{tickerText}</span>
+    <div className="w-full bg-[#D4AF37] text-black font-bold text-xs uppercase tracking-widest py-1.5 px-4 text-center overflow-hidden whitespace-nowrap min-h-[28px]">
+      <span className="inline-block motion-safe:animate-pulse">{tickerText}</span>
     </div>
   );
 }
@@ -45,7 +45,7 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinkClass = "text-sm font-bold uppercase tracking-widest text-gray-700 dark:text-gray-200 hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors";
-  const mobileLinkClass = "text-lg font-bold uppercase tracking-widest text-gray-700 dark:text-gray-200 hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors";
+  const mobileLinkClass = "flex items-center min-h-[48px] text-lg font-bold uppercase tracking-widest text-gray-700 dark:text-gray-200 hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors";
   const kickLinkClass = "text-sm font-bold uppercase tracking-widest text-[#0066FF] dark:text-[#53FC18] hover:text-[#B8860B] dark:hover:text-[#D4AF37] transition-colors";
 
   return (
