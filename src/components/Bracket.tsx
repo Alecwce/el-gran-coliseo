@@ -28,11 +28,11 @@ const upperFinal: BracketMatch[] = [
 ];
 
 const lowerFinal: BracketMatch[] = [
-  { stage: "Lower Bracket Final", stageLabel: "LOWER FINAL", bo: 3, team1: "TBD", team2: "TBD" },
+  { stage: "Lower Bracket Final", stageLabel: "LOWER FINAL", bo: 3, team1: "The Bot$", team2: "WK Bear and Bones" },
 ];
 
 const grandFinal: BracketMatch[] = [
-  { stage: "Grand Final", stageLabel: "GRAN FINAL", bo: 5, team1: "TBD", team2: "TBD" },
+  { stage: "Grand Final", stageLabel: "GRAN FINAL", bo: 5, team1: "Gotto House", team2: "TBD" },
 ];
 
 function TeamRow({ name }: { name: string }) {
@@ -94,10 +94,10 @@ export function Bracket() {
         {/* Sección labels */}
         <div className="min-w-[1100px] flex gap-12 mb-4 px-2">
           <div className="min-w-[240px] text-center">
-            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 1 — Semifinales / R1</span>
+            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 1 — Playoff Inicial / Final UB</span>
           </div>
           <div className="min-w-[240px] text-center">
-            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 2 — Final UB / Semi LB</span>
+            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">May 2 — Día de Descanso</span>
           </div>
           <div className="min-w-[240px] text-center">
             <span className="text-xs font-bold text-[#B8860B] dark:text-[#D4AF37] uppercase tracking-widest">May 3 — Gran Final / Final LB</span>

@@ -44,12 +44,12 @@ export const schedule: Match[] = [
   { date: "2026-05-01", time: "13:00", team1: "Team Peyitaz", team2: "Gotto House", stage: "Upper Bracket SF", bo: 3, winner: "Gotto House" },
   { date: "2026-05-01", time: "16:00", team1: "WK Bear and Bones", team2: "The Monsters", stage: "Lower Bracket R1", bo: 3, winner: "WK Bear and Bones" },
   { date: "2026-05-01", time: "19:00", team1: "The Blacklist", team2: "Team Peyitaz", stage: "Lower Bracket R1", bo: 3, winner: "The Blacklist" },
+  { date: "2026-05-01", time: "21:00", team1: "The Bot$", team2: "Gotto House", stage: "Upper Bracket Final", bo: 3, winner: "Gotto House" },
+  { date: "2026-05-01", time: "22:30", team1: "WK Bear and Bones", team2: "The Blacklist", stage: "Lower Bracket Semifinal", bo: 3, winner: "WK Bear and Bones" },
 
-  // ── Playoffs: 2 de Mayo ──
-  { date: "2026-05-02", time: "14:00", team1: "The Bot$", team2: "Gotto House", stage: "Upper Bracket Final", bo: 3 },
-  { date: "2026-05-02", time: "18:00", team1: "WK Bear and Bones", team2: "The Blacklist", stage: "Lower Bracket Semifinal", bo: 3 },
+  // ── Día de Descanso: 2 de Mayo ──
 
   // ── Final Day: 3 de Mayo ──
-  { date: "2026-05-03", time: "12:00", team1: "TBD", team2: "TBD", stage: "Lower Bracket Final", bo: 3 },
-  { date: "2026-05-03", time: "16:00", team1: "TBD", team2: "TBD", stage: "Grand Final", bo: 5 },
+  { date: "2026-05-03", time: "12:00", team1: "The Bot$", team2: "WK Bear and Bones", stage: "Lower Bracket Final", bo: 3 },
+  { date: "2026-05-03", time: "16:00", team1: "Gotto House", team2: "TBD", stage: "Grand Final", bo: 5 },
 ];
